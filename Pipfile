@@ -1,0 +1,15 @@
+[[source]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+jinja2 = "*"
+python-dotenv = "*"
+
+[dev-packages]
+watchdog = "*"
+
+[requires]
+python_version = "3.9"
