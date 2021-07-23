@@ -9,7 +9,6 @@ app.secret_key = os.getenv('SECRET_KEY', 'default secret')
 @app.route('/')
 @app.route('/hello')
 def hello():
-    # hello,this is a test for git.
     name = request.args.get('name')
     if name is None:
         name = request.cookies.get('name', 'Human')
