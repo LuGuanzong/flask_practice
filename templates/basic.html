@@ -1,0 +1,31 @@
+{# 学习利用flask-wtf创建表单 #}
+{% extends 'base.html' %}
+{% from 'macros.html' import form_field %}
+
+{% block content %}
+<h2>Basic Form</h2>
+
+<form method="post">
+    {{ form.csrf_token }}
+     {#
+               {{ form.username.label }}<br>
+        {{ form.username }}<br>
+        {% if form.username.errors %}
+            {% for message in form.username.errors %}
+            <small class="error">{{ message }}</small><br>
+            {% endfor %}
+        {% endif %}
+        {{ form.password.label }}<br>
+        {{ form.password }}
+        {% if form.password.errors %}
+            {% for message in form.password.errors %}
+            <small class="error">{{ message }}</small><br>
+            {% endfor %}
+        {% endif %}
+    #}
+    {{ form_field(form.username) }}
+    {{ form_field(form.password) }}
+    <br>{{ form.remember }}{{ form.remember.label }}<br><br>
+    {{ form.submit }}<br>
+</form>
+{% endblock %}
