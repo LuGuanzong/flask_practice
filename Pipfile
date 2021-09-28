@@ -7,6 +7,9 @@ name = "pypi"
 flask = "*"
 jinja2 = "*"
 python-dotenv = "*"
+flask-wtf = "*"
+flask-mail = "*"
+flask-ckeditor = "*"
 
 [dev-packages]
 watchdog = "*"
